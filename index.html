@@ -1,6 +1,311 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Yan-Shuo Liang</title>
+    <meta name="author" content="Yan-Shuo Liang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yan-Shuo Liang">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="images/nju.png">
+    <meta name="google-site-verification" content="CNhbLx2BoehPp-DOYxfY7G2WAZaVafc1PVgPelqlibg" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #101011;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: #1a4ed8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .profile-text {
+            flex: 1 1 55%;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .profile-text p.links a {
+            margin: 0 6px;
+        }
+
+        .profile-photo {
+            flex: 1 1 35%;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .profile-photo img {
+            width: 80%;
+            max-width: 200px;
+            border-radius: 6px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .paper {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .paper img {
+            width: 200px;
+            border-radius: 6px;
+            margin-right: 20px;
+        }
+
+        .paper-content {
+            flex: 1 1 60%;
+            min-width: 250px;
+        }
+
+        .paper-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .paper-meta {
+            font-style: italic;
+            color: #444;
+            margin: 4px 0;
+        }
+
+        .paper-links a {
+            margin-right: 10px;
+        }
+
+        .paper-desc {
+            margin-top: 8px;
+        }
+
+        footer {
+            text-align: right;
+            font-size: small;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="profile">
+        <div class="profile-text">
+            <h1>Yan-Shuo Liang 「梁宴硕」</h1>
+            <p>
+                Currently, I am a PhD candidate in the Department of Computer Science and Technology at 
+                <a href="https://cs.nju.edu.cn/lwj">Nanjing University</a>, advised by Prof. Wu-Jun Li. 
+                I will graduate in 2026 and am currently seeking job opportunities.
+            </p>
+            <p class="links">
+                <a href="resume.pdf">CV</a> / 
+                <a href="https://github.com/liangyanshuo">Github</a> / 
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=e04lsgsAAAAJ">Google Scholar</a> /
+                <a href="https://dblp.org/pid/329/6195.html">DBLP</a> 
+            </p>
+        </div>
+        <div class="profile-photo">
+            <a href="images/liangyanshuo.jpg">
+                <img src="images/liangyanshuo.jpg" alt="profile photo">
+            </a>
+        </div>
+    </div>
+
+    <section>
+        <h2>Biography</h2>
+        <ul>
+            <li>2024.03-2026.03: PhD candidate, <a href="https://cs.nju.edu.cn">Department of Computer Science and Technology, Nanjing University</a></li>
+            <li>2025.05-2025.09: Internship at ByteDance, Hangzhou</li>
+            <li>2020.09-2024.03: PhD student, Department of Computer Science and Technology, Nanjing University</li>
+            <li>2016.09-2020.06: B.S., <a href="https://math.nju.edu.cn">Department of Mathematics, Nanjing University</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Research Interests</h2>
+        <ul>
+            <li><strong>Continual / Incremental Learning:</strong> Minimize interference while learning new tasks and maintain stable long-term learning ability.</li>
+            <li><strong>Parameter-Efficient Fine-Tuning:</strong> Freeze backbone of large models, optimize lightweight inserted modules for efficient training under resource constraints.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Internship Experience</h2>
+        <div class="internship">
+            <h3>ByteDance, Hangzhou <span style="font-weight: normal;">(May 2025 – Sep 2025)</span></h3>
+            <ul>
+                <li><strong>Department:</strong> Data-AML – Applied Algorithms Team</li>
+                <li><strong>Position:</strong> Large Model Algorithm Intern (Large Systems & Compute) – Jindouyun Talent Program</li>
+                <li><strong>Task 1:</strong> Introduced Progressive Learning strategy to train a multimodal recommendation large model, enabling scaling up during training. First, trained most data with a smaller model, then scaled to a larger model. Result: training efficiency increased by ~30%, and final performance matched training a large model from scratch, achieving efficient training.</li>
+                <li><strong>Task 2:</strong> Applied next-generation optimizer Muon to train a multimodal recommendation large model. Compared with Adam, Muon significantly improved training efficiency and model performance for ~1B and ~7B parameter models. Using only ~60% of the dataset, it achieved the same performance as Adam with full data.</li>
+            </ul>
+        </div>
+    </section>    
+
+    <section>
+        <h2>Publications</h2>
+
+        <div class="paper">
+            <img src="images/GainLoRA.png" alt="GainLoRA">
+            <div class="paper-content">
+                <a href="https://arxiv.org/abs/2505.15424" class="paper-title">Gated Integration of Low-Rank Adaptation for Continual Learning of Language Models</a>
+                <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+                <div class="paper-meta">Conference on Neural Information Processing Systems (NeurIPS), 2025, CCF-A First Author</div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/pdf/2505.15424">paper</a>
+                    <a href="https://github.com/liangyanshuo/gainlora">code</a>
+                    <a href="data/GainLoRA.bib">bibtex</a>
+                </div>
+                <p class="paper-desc">
+                    Proposed Gated Integration of Low-Rank Adaptation (GainLoRA), introducing a gating network on top of InfLoRA. Uses a mixture-of-experts paradigm for multi-task incremental learning.
+                </p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <img src="images/InfLoRA.png" alt="InfLoRA">
+            <div class="paper-content">
+            <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Liang_InfLoRA_Interference-Free_Low-Rank_Adaptation_for_Continual_Learning_CVPR_2024_paper.html" class="paper-title">InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning</a>
+            <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+            <div class="paper-meta">Computer Vision and Pattern Recognition Conference (CVPR), 2024, CCF-A First Author</div>
+            <div class="paper-links">
+                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Liang_InfLoRA_Interference-Free_Low-Rank_Adaptation_for_Continual_Learning_CVPR_2024_paper.pdf">paper</a>
+                <a href="https://github.com/liangyanshuo/InfLoRA">code</a>
+                <a href="data/InfLoRA.bib">bibtex</a>
+            </div>
+            <p class="paper-desc">
+                We propose a new PEFT method, called InfLoRA, for continual learning. InfLoRA injects a small number of parameters to reparameterize the pre-trained weights and shows that fine-tuning these injected parameters is equivalent to fine-tuning the pre-trained weights within a subspace. Furthermore, InfLoRA designs this subspace to eliminate the interference of the new task on the old tasks.
+            </p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <img src="images/LODE.png" alt="LODE">
+            <div class="paper-content">
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/249f73e01f0a2bb6c8d971b565f159a7-Abstract-Conference.html" class="paper-title">Loss Decoupling for Task-Agnostic Continual Learning</a>
+            <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+            <div class="paper-meta">Annual Conference on Neural Information Processing Systems (NeurIPS), 2023, CCF-A First Author</div>
+            <div class="paper-links">
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/249f73e01f0a2bb6c8d971b565f159a7-Paper-Conference.pdf">paper</a>
+                <a href="https://github.com/liangyanshuo/Loss-Decoupling-for-Task-Agnostic-Continual-Learning">code</a>
+                <a href="data/LODE.bib">bibtex</a>
+            </div>
+            <p class="paper-desc">
+                We propose a simple yet effective method, which separates the two objectives for the new task by decoupling the loss of the new task, providing a way to obtain a better trade-off between stability and plasticity than those methods with coupled loss.
+            </p>
+            </div>
+        </div>
+
+        <div class="paper">
+            <img src="images/API.png" alt="API">
+            <div class="paper-content">
+            <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Liang_Adaptive_Plasticity_Improvement_for_Continual_Learning_CVPR_2023_paper.html" class="paper-title">Adaptive Plasticity Improvement for Continual Learning</a>
+            <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+            <div class="paper-meta">Computer Vision and Pattern Recognition Conference (CVPR), 2023, CCF-A First Author</div>
+            <div class="paper-links">
+                <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Liang_Adaptive_Plasticity_Improvement_for_Continual_Learning_CVPR_2023_paper.pdf">paper</a>
+                <a href="https://github.com/liangyanshuo/Adaptive-Plasticity-Improvement-for-Continual-Learning">code</a>
+                <a href="data/API.bib">bibtex</a>
+            </div>
+            <p class="paper-desc">
+                We propose a continual learning framework, Adaptive Plasticity Improvement (API), which achieves the decoupling of new and old task learning through a parameter dynamic expansion mechanism. Subsequent work extends the API framework to pre-trained models and large language models.
+            </p>
+            </div>
+        </div>
+
+        
+        <!-- 你可以把其他论文也按照相同格式改写 -->
+    </section>
+
+    <section>
+        <h2>Awards & Honors</h2>
+        <ul>
+            <li>Presidential Special Scholarship, Nanjing University, 2020</li>
+            <li>Huawei Scholarship, Nanjing University, 2023</li>
+            <li>Outstanding Graduate Student of Nanjing University, 2024</li>
+            <li>National Scholarship for PhD Students, Nanjing University, 2024</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Teaching Assistant</h2>
+        <ul>
+            <li>Data Structure (Undergraduate, Autumn 2020)</li>
+            <li>Data Structure (Undergraduate, Spring 2021)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: liangys [at] smail [dot] nju [dot] edu [dot] cn</p>
+        <p>Nanjing University Xianlin Campus, 163 Xianlin Avenue, Qixia District, Nanjing, Jiangsu 210023, China</p>
+    </section>
+
+    <footer>
+        <a href="https://jonbarron.info">Template</a>
+    </footer>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE HTML>
+<html lang="en">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Yan-Shuo Liang</title>
@@ -26,15 +331,16 @@
                         <p style="text-align:center">
                             <name>Yan-Shuo Liang 「梁宴硕」</name>
                         </p>
-                        <p>Currently, I am a PhD candidate in Department of Computer Science and Technology at Nanjing University, where I am fortunate to be advised by Prof. <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a>.
+                        <p>Currently, I am a PhD candidate in the Department of Computer Science and Technology at Nanjing University, where I am fortunate to be advised by Prof. <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a>. I will graduate in 2026 and am currently seeking job opportunities.
                         </p>
                         <p style="text-align:center">
                             <a href="https://dblp.org/pid/329/6195.html">DBLP</a>
                             &nbsp/&nbsp
-                            <!-- <a href="https://www.linkedin.com/in/zhicheng-sun">LinkedIn</a> &nbsp/&nbsp -->
+                            <a href="resume.pdf">CV</a>
+                            &nbsp/&nbsp
                             <a href="https://github.com/liangyanshuo">Github</a> 
-                            <!-- &nbsp/&nbsp -->
-                            <!-- <a href="https://twitter.com/feifeiobama">Twitter</a> -->
+                            &nbsp/&nbsp
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=e04lsgsAAAAJ">Google Scholar</a> 
                         </p>
                     </td>
                     <td style="padding:2.5%;width:40%;max-width:40%">
@@ -68,10 +374,12 @@
                 <tbody>
                 <tr>
                     <td style="padding:2.5%;width:100%;vertical-align:middle">
-                        <heading>Research</heading>
+                        <heading>Research Interests</heading>
                         <p>
-                            My current research focuses on <strong>continual / lifelong / incremental learning</strong>. Continual learning requires the model to learn from a non-stationary environments. When learning on a new environment (task), the model should overcomes forgetting of the old tasks.
-                            Meanwhile, I am broadly interested in computer vision and machine learning topics.
+                            <strong>Continual / Incremental Learning</strong>: In continual learning scenarios, models are required to continually adapt to new tasks. However, learning new tasks often leads to catastrophic forgetting of previously acquired knowledge. The research objective is to design model architectures and training methods that minimize interference, maintain long-term stable learning ability, and achieve efficient training.
+                        </p>
+                        <p>
+                            <strong>Parameter-Efficient Fine-Tuning of Large Models</strong>: In resource-constrained environments (e.g., limited GPU memory or storage), full-parameter fine-tuning of large models is prohibitively costly. Parameter-efficient fine-tuning methods freeze the backbone of the model while only optimizing lightweight inserted modules, thereby significantly reducing memory and storage overhead and enabling efficient training.
                         </p>
                     </td>
                 </tr>
@@ -79,133 +387,125 @@
             </table>
 
 
-            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
+            <style>
+                .paper {
+                  display: flex;
+                  align-items: flex-start;
+                  margin-bottom: 2rem;
+                }
+                
+                .paper img {
+                  width: 200px;
+                  border-radius: 6px;
+                  margin-right: 20px;
+                }
+                
+                .paper-content {
+                  flex: 1;
+                }
+                
+                .paper-title {
+                  font-size: 1.1rem;
+                  font-weight: bold;
+                  color: #1a4ed8;
+                  text-decoration: none;
+                }
+                
+                .paper-title:hover {
+                  text-decoration: underline;
+                }
+                
+                .paper-meta {
+                  margin: 4px 0;
+                  font-style: italic;
+                  color: #444;
+                }
+                
+                .paper-links a {
+                  margin-right: 10px;
+                  color: #1a4ed8;
+                  text-decoration: none;
+                }
+                
+                .paper-links a:hover {
+                  text-decoration: underline;
+                }
+                
+                .paper-desc {
+                  margin-top: 8px;
+                  color: #333;
+                  line-height: 1.5;
+                }
+            </style>
+                
+                
+            <div class="paper">
+                <img src="images/GainLoRA.png" alt="GainLoRA">
+                <div class="paper-content">
+                <a href="." class="paper-title">Gated Integration of Low-Rank Adaptation for Continual Learning of Large Language Models</a>
+                <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+                <div class="paper-meta">Annual Conference on Neural Information Processing Systems (NeurIPS), 2025, CCF-A First Author</div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2404.00228">paper</a>
+                    <a href="https://github.com/liangyanshuo/InfLoRA">code</a>
+                    <a href="data/LODE.bib">bibtex</a>
+                </div>
+                <p class="paper-desc">
+                    Proposed Gated Integration of Low-Rank Adaptation (GainLoRA), which introduces a gating network module on top of InfLoRA. By designing a dynamic routing mechanism, the model architecture is transformed into a mixture-of-experts paradigm, enabling knowledge selection and control in multi-task incremental learning.
+                </p>
+                </div>
+            </div>
+                
+            <div class="paper">
+                <img src="images/InfLoRA.png" alt="InfLoRA">
+                <div class="paper-content">
+                <a href="." class="paper-title">InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning</a>
+                <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+                <div class="paper-meta">Computer Vision and Pattern Recognition Conference (CVPR), 2024, CCF-A First Author</div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2404.00228">paper</a>
+                    <a href="https://github.com/liangyanshuo/InfLoRA">code</a>
+                    <a href="data/LODE.bib">bibtex</a>
+                </div>
+                <p class="paper-desc">
+                    We propose a new PEFT method, called InfLoRA, for continual learning. InfLoRA injects a small number of parameters to reparameterize the pre-trained weights and shows that fine-tuning these injected parameters is equivalent to fine-tuning the pre-trained weights within a subspace. Furthermore, InfLoRA designs this subspace to eliminate the interference of the new task on the old tasks.
+                </p>
+                </div>
+            </div>
 
+            <div class="paper">
+                <img src="images/LODE.png" alt="LODE">
+                <div class="paper-content">
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/249f73e01f0a2bb6c8d971b565f159a7-Abstract-Conference.html" class="paper-title">Loss Decoupling for Task-Agnostic Continual Learning</a>
+                <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+                <div class="paper-meta">Annual Conference on Neural Information Processing Systems (NeurIPS), 2023, CCF-A First Author</div>
+                <div class="paper-links">
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/249f73e01f0a2bb6c8d971b565f159a7-Abstract-Conference.html">paper</a>
+                    <a href="https://github.com/liangyanshuo/Loss-Decoupling-for-Task-Agnostic-Continual-Learning">code</a>
+                    <a href="data/LODE.bib">bibtex</a>
+                </div>
+                <p class="paper-desc">
+                    We propose a simple yet effective method, which separates the two objectives for the new task by decoupling the loss of the new task, providing a way to obtain a better trade-off between stability and plasticity than those methods with coupled loss.
+                </p>
+                </div>
+            </div>
 
-                <tr>
-                    <td style="padding-left:2.5%;padding-right:20px;width:25%;vertical-align:middle">
-                        <div class="one">
-                            <img src='images/InfLoRA.png' width="180px" alt="LODE">
-                        </div>
-                    </td>
-                    <td style="padding-left:20px;width:75%;vertical-align:top">
-                        <a href=".">
-                            <papertitle>InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning</papertitle>
-                        </a>
-                        <br>
-                        <strong>Yan-Shuo Liang</strong>,
-                        <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a>,
-                        <br>
-                        <em>CVPR</em>, 2024 
-                        <br>
-                        <a href="https://arxiv.org/abs/2404.00228">paper</a>
-                        /
-                        <a href="https://github.com/liangyanshuo/InfLoRA">code</a>
-                        /
-                        <a href="data/LODE.bib">bibtex</a>
-                        <p></p>
-                        <p>
-                            we propose a new PEFT method, called InfLoRA, for continual learning. InfLoRA injects a small number of parameters to reparameterize the pre-trained weights and shows that fine-tuning these injected parameters is equivalent to fine-tuning the pre-trained weights within a subspace. Furthermore, InfLoRA designs this subspace to eliminate the interference of the new task on the old tasks, making a good trade-off between stability and plasticity.
-                        </p>
-                    </td>
-                </tr>
-
-
-
-                <tr>
-                    <td style="padding-left:2.5%;padding-right:20px;width:25%;vertical-align:middle">
-                        <div class="one">
-                            <img src='images/LODE.png' width="180px" alt="LODE">
-                        </div>
-                    </td>
-                    <td style="padding-left:20px;width:75%;vertical-align:top">
-                        <a href=".">
-                            <papertitle>Loss Decoupling for Task-Agnostic Continual Learning</papertitle>
-                        </a>
-                        <br>
-                        <strong>Yan-Shuo Liang</strong>,
-                        <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a>,
-                        <br>
-                        <em>NeurIPS</em>, 2023 
-                        <br>
-                        <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/249f73e01f0a2bb6c8d971b565f159a7-Abstract-Conference.html">paper</a>
-                        /
-                        <a href="https://github.com/liangyanshuo/Loss-Decoupling-for-Task-Agnostic-Continual-Learning">code</a>
-                        /
-                        <a href="data/LODE.bib">bibtex</a>
-                        <p></p>
-                        <p>
-                            We propose a simple yet effective method, which separates the two objectives for the new task by decoupling the loss of the new task, providing a way to obtain a better trade-off between stability and plasticity than those methods with coupled loss.
-                        </p>
-                    </td>
-                </tr>
-
-
-
-
-
-
-
-                <tr>
-                    <td style="padding-left:2.5%;padding-right:20px;width:25%;vertical-align:middle">
-                        <div class="one">
-                            <img src='images/API.png' width="180px" alt="API">
-                        </div>
-                    </td>
-                    <td style="padding-left:20px;width:75%;vertical-align:top">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Liang_Adaptive_Plasticity_Improvement_for_Continual_Learning_CVPR_2023_paper.html">
-                            <papertitle>Adaptive Plasticity Improvement for Continual Learning</papertitle>
-                        </a>
-                        <br>
-                        <strong>Yan-Shuo Liang</strong>,
-                        <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a>,
-                        <br>
-                        <em>CVPR</em>, 2023
-                        <br>
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Liang_Adaptive_Plasticity_Improvement_for_Continual_Learning_CVPR_2023_paper.pdf">paper</a>
-                        /
-                        <a href="https://github.com/liangyanshuo/Adaptive-Plasticity-Improvement-for-Continual-Learning">code</a>
-                        /
-                        <a href="data/API.bib">bibtex</a>
-                        <p></p>
-                        <p>
-                            We propose a new method that evaluates the model's plasticity and then adaptively improve the model's plasticity for learning a new task adaptively.
-                        </p>
-                    </td>
-                </tr>
-
-                <!-- <tr>
-                    <td style="padding-left:2.5%;padding-right:20px;padding-bottom:2.5%;width:25%;vertical-align:middle">
-                        <div class="one">
-                            <img src='images/PatchKD.png' width="180px" alt="PatchKD">
-                        </div>
-                    </td>
-                    <td style="padding-left:20px;padding-bottom:2.5%;width:75%;vertical-align:top">
-                        <a href="https://dl.acm.org/doi/abs/10.1145/3503161.3548179">
-                            <papertitle>Patch-based Knowledge Distillation for Lifelong Person Re-Identification</papertitle>
-                        </a>
-                        <br>
-                        <strong>Zhicheng Sun</strong>,
-                        <a href="http://www.muyadong.com">Yadong Mu</a>
-                        <br>
-                        <em>ACM Multimedia</em>, 2022
-                        <br>
-                        <a href="http://www.muyadong.com/paper/acmmm22_sunzc.pdf">paper</a>
-                        /
-                        <a href="https://github.com/feifeiobama/PatchKD">code</a>
-                        /
-                        <a href="data/PatchKD.bib">bibtex</a>
-                        <p></p>
-                        <p>
-                            We use adaptively-chosen patches (rather than whole images) to pilot the
-                            forgetting-resistant distillation for lifelong person re-identification.
-                        </p>
-                    </td>
-                </tr> -->
-
-                </tbody>
-            </table>
+            <div class="paper">
+                <img src="images/API.png" alt="API">
+                <div class="paper-content">
+                <a href="." class="paper-title">Adaptive Plasticity Improvement for Continual Learning</a>
+                <div><strong>Yan-Shuo Liang</strong>, <a href="https://cs.nju.edu.cn/lwj">Wu-Jun Li</a></div>
+                <div class="paper-meta">Computer Vision and Pattern Recognition Conference (CVPR), 2023, CCF-A First Author</div>
+                <div class="paper-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Liang_Adaptive_Plasticity_Improvement_for_Continual_Learning_CVPR_2023_paper.pdf">paper</a>
+                    <a href="https://github.com/liangyanshuo/Adaptive-Plasticity-Improvement-for-Continual-Learning">code</a>
+                    <a href="data/API.bib">bibtex</a>
+                </div>
+                <p class="paper-desc">
+                    We propose a continual learning framework, Adaptive Plasticity Improvement (API), which achieves the decoupling of new and old task learning through a parameter dynamic expansion mechanism. Subsequent work extends the API framework to pre-trained models and large language models.
+                </p>
+                </div>
+            </div>
 
 
             <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -217,7 +517,13 @@
                             Presidential Special Scholarship, Nanjing University, 2020
                         </p>
                         <p>
-                            Huawei Scholarship, 2023
+                            Huawei Scholarship, Nanjing University, 2023
+                        </p>
+                        <p>
+                            Outstanding Graduate Student of Nanjing University, Nanjing University, 2024
+                        </p>
+                        <p>
+                            National Scholarship for PhD Students, Nanjing University, 2024
                         </p>
                     </td>
                 </tr>
@@ -255,49 +561,6 @@
                 </tr>
                 </tbody>
             </table>
-            
-            <!-- <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr>
-                    <td style="padding:2.5%;width:100%;vertical-align:middle">
-                        <heading>Service and Teaching</heading>
-                        <ul>
-                            <li>Conference Reviewer: ICCV 2023, ACM MM 2022-2023</li>
-                        </ul>
-                        <ul>
-                            <li>Journal Reviewer: TMM 2022-2023, NC 2022</li>
-                        </ul>
-                        <ul>
-                            <li>Teaching Assistant: <a href="http://www.muyadong.com/cvdl22.html">Computer Vision and Deep Learning</a> by Prof. <a href="http://www.muyadong.com">Yadong Mu</a>, Spring 2022</li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table> -->
-
-
-            <!-- <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr>
-                    <td style="padding:2.5%;width:100%;vertical-align:middle">
-                        <heading>Miscellaneous</heading>
-                        <ul>
-                            <li>
-                                After the breakthrough of <a href="https://www.nature.com/articles/nature16961">AlphaGo</a>, I became obsessed with AI bots
-                                and held a top-5 user ranking on the AI competitive platform <a href="https://en.botzone.org.cn">Botzone</a> for a long time.
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                In the <a href="https://github.com/PKU-GeekGame/geekgame-1st">1st PKU GeekGame</a>,
-                                I almost succeeded in brute forcing a CTF problem <a href="https://github.com/PKU-GeekGame/geekgame-1st/tree/master/writeups/players/feifeiobama">using an AI algorithm.</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table> -->
-
 
             <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
@@ -315,4 +578,4 @@
 </table>
 </body>
 
-</html>
+</html> -->
